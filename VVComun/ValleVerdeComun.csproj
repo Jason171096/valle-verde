@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{958B2A61-4660-4665-BFD8-ABF2C8C6FF30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ValleVerdeComun</RootNamespace>
+    <AssemblyName>ValleVerdeComun</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.OposScale_CCO">
+      <HintPath>Referencias\AxInterop.OposScale_CCO.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.OposScanner_CCO">
+      <HintPath>Referencias\AxInterop.OposScanner_CCO.dll</HintPath>
+    </Reference>
+    <Reference Include="Facturama, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Facturama.1.0.7\lib\net452\Facturama.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.Serializers.Newtonsoft.Json, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.Newtonsoft.Json.1.5.1\lib\net452\RestSharp.Serializers.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Programacion\Cajas.cs" />
+    <Compile Include="Programacion\CajonDinero.cs" />
+    <Compile Include="Programacion\ClavesSAT.cs" />
+    <Compile Include="Programacion\Usuario.cs" />
+    <Compile Include="Programacion\Cliente.cs" />
+    <Compile Include="Programacion\Usuarios.cs" />
+    <Compile Include="Programacion\Clientes.cs" />
+    <Compile Include="Programacion\CodigoBarras\BarcodeCommon.cs" />
+    <Compile Include="Programacion\CodigoBarras\BarcodeLib.cs" />
+    <Compile Include="Programacion\CodigoBarras\BarcodeLib.designer.cs">
+      <DependentUpon>BarcodeLib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programacion\CodigoBarras\IBarcode.cs" />
+    <Compile Include="Programacion\CodigoBarras\Labels.cs" />
+    <Compile Include="Programacion\CodigoBarras\SaveData.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Blank.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Codabar.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Code11.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Code128.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Code39.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Code93.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\EAN13.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\EAN8.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\FIM.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Interleaved2of5.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\ISBN.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\ITF14.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\JAN13.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\MSI.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Pharmacode.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Postnet.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Standard2of5.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\Telepen.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\UPCA.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\UPCE.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\UPCSupplement2.cs" />
+    <Compile Include="Programacion\CodigoBarras\Symbologies\UPCSupplement5.cs" />
+    <Compile Include="Programacion\ConfiguracionBO.cs" />
+    <Compile Include="Programacion\ConfiguracionPV.cs" />
+    <Compile Include="Programacion\ConfiguracionGlobal.cs" />
+    <Compile Include="Programacion\Corte.cs" />
+    <Compile Include="Programacion\DatosConfiguracionGlobal.cs" />
+    <Compile Include="Programacion\PermisosUsuario.cs" />
+    <Compile Include="Programacion\DatosCredito.cs" />
+    <Compile Include="Programacion\DatosEmpresa.cs" />
+    <Compile Include="Programacion\DatosFactura.cs" />
+    <Compile Include="Programacion\DatosTicket.cs" />
+    <Compile Include="Programacion\Fabricantes.cs" />
+    <Compile Include="Programacion\Facturama\FacturamaMetodos.cs" />
+    <Compile Include="Programacion\GenerarTicket.cs" />
+    <Compile Include="Programacion\Huellas\HuellaCodigoComun.cs" />
+    <Compile Include="Programacion\Huellas\BaseDatos\Huellas.cs" />
+    <Compile Include="Programacion\Huellas\Recursos\ANSI378TemplateHelper.cs" />
+    <Compile Include="Programacion\Huellas\Recursos\LumiSDKLumiSetOption.cs" />
+    <Compile Include="Programacion\Huellas\Recursos\LumiSDKWrapper.cs" />
+    <Compile Include="Programacion\Huellas\Recursos\Minutiae.cs" />
+    <Compile Include="Programacion\Huellas\ResultadoHuella.cs" />
+    <Compile Include="Programacion\Huellas\Recursos\Sensor.cs" />
+    <Compile Include="Programacion\Huellas\Registrar.cs" />
+    <Compile Include="Programacion\Huellas\Verificar.cs" />
+    <Compile Include="Programacion\Impuestos.cs" />
+    <Compile Include="Programacion\InicioSesion\InicioSesion.cs" />
+    <Compile Include="Programacion\InterfazPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programacion\Lineas.cs" />
+    <Compile Include="Programacion\Marcas.cs" />
+    <Compile Include="Programacion\Movivendor\MovivendorMetodos.cs" />
+    <Compile Include="Programacion\Movivendor\ProductoMovivendor.cs" />
+    <Compile Include="Programacion\Movivendor\RespuestaVenta.cs" />
+    <Compile Include="Programacion\Proveedor.cs" />
+    <Compile Include="Vistas\BuscadorComboBox.cs" />
+    <Compile Include="Vistas\BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\BuscarCliente.designer.cs">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\DarFormatoBasicoTabla.cs" />
+    <Compile Include="Vistas\Ventas\Facturar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas\Facturar.Designer.cs">
+      <DependentUpon>Facturar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\InicioSesion\InicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\InicioSesion\InicioSesion.Designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inventario\BuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inventario\BuscarProducto.designer.cs">
+      <DependentUpon>BuscarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionBD.cs" />
+    <Compile Include="Vistas\Inventario\CheckDigit.cs" />
+    <Compile Include="Vistas\Inventario\ImagenFlotante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inventario\ImagenFlotante.designer.cs">
+      <DependentUpon>ImagenFlotante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inventario\ImagenProductoFlotante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inventario\ImagenProductoFlotante.designer.cs">
+      <DependentUpon>ImagenProductoFlotante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Programacion\Precios.cs" />
+    <Compile Include="Programacion\Producto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inventario\Precios.cs" />
+    <Compile Include="Vistas\Inventario\VerificadorDePrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inventario\VerificadorDePrecios.designer.cs">
+      <DependentUpon>VerificadorDePrecios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RegistrarHuella\RegistrarHuella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RegistrarHuella\RegistrarHuella.Designer.cs">
+      <DependentUpon>RegistrarHuella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventas\FondoSiguienteTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas\FondoSiguienteTurno.designer.cs">
+      <DependentUpon>FondoSiguienteTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventas\PedirCantidadDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas\PedirCantidadDevolucion.designer.cs">
+      <DependentUpon>PedirCantidadDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventas\PedirFondo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas\PedirFondo.designer.cs">
+      <DependentUpon>PedirFondo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventas\VerificarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas\VerificarDatos.designer.cs">
+      <DependentUpon>VerificarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventas\VerVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas\VerVentas.designer.cs">
+      <DependentUpon>VerVentas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Programacion\InterfazPrincipal.resx">
+      <DependentUpon>InterfazPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\InicioSesion\InicioSesion.resx">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inventario\BuscarProducto.resx">
+      <DependentUpon>BuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inventario\ImagenFlotante.resx">
+      <DependentUpon>ImagenFlotante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inventario\ImagenProductoFlotante.resx">
+      <DependentUpon>ImagenProductoFlotante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vistas\Inventario\VerificadorDePrecios.resx">
+      <DependentUpon>VerificadorDePrecios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RegistrarHuella\RegistrarHuella.resx">
+      <DependentUpon>RegistrarHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas\Facturar.resx">
+      <DependentUpon>Facturar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas\FondoSiguienteTurno.resx">
+      <DependentUpon>FondoSiguienteTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas\PedirCantidadDevolucion.resx">
+      <DependentUpon>PedirCantidadDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas\PedirFondo.resx">
+      <DependentUpon>PedirFondo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas\VerificarDatos.resx">
+      <DependentUpon>VerificarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas\VerVentas.resx">
+      <DependentUpon>VerVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto_placeholder200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huella100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaptureInProgress_M320_resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huellaescanear64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ServiceOPOSLib">
+      <Guid>{C4D9F365-BF8D-4656-9BEE-41A62991050A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Referencias\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devoluciones24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cajon24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cajaTicket100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blanco100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
